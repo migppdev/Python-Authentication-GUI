@@ -1,7 +1,7 @@
 import tkinter as tk
 from auth_db import verify_user, register_user, close_db
 from tkinter import messagebox
-from main import App as app_nueva_ventana
+from menu import App as app_nueva_ventana
 
 class App(tk.Tk):
     def __init__(self):
@@ -81,7 +81,7 @@ class App(tk.Tk):
         self.password.delete(0, tk.END)
         self.send_btn.config(text="Registrarse")
         self.change_mode_lbl.config(text="¿Ya estas registrado? Iniciar sesión")
-        self.send_btn.config(command=self.log_in_user_gui)
+        self.send_btn.config(command=self.show_sign_in_gui)
         self.change_mode_lbl.bind("<Button-1>", self.show_log_in_gui)
 
     def on_closing(self):
