@@ -1,7 +1,7 @@
 import sqlite3 as sql
 import bcrypt
 
-conn = sql.connect("./db/users_credentials.db")
+conn = sql.connect("users_credentials.db")
 
 cursor = conn.cursor()
 
